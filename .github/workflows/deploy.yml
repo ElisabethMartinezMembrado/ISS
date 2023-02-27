@@ -13,16 +13,4 @@ jobs:
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
       with:
         angular_dist_build_folder: dist/station-international
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        github_access_token: ${{ secrets.ACCESS_TOKEN }}
-        permissions:
-          contents: read
-          pull-requests: write
-          issues: write
-          deployments: write
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-
-
-         
+        
