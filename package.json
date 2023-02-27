@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "set PUBLIC_URL= && react-scripts start",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+  "homepage": "https://elisabethmartinezmembrado.github.io/ISS/",
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.1.0",
