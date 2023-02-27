@@ -1,0 +1,21 @@
+body {
+    background: url('../../img/FondoCielo.jpg');
+    max-width: 100%;
+    height: auto;
+}
+
+#navbar {
+    background-color: rgba(80, 163, 236, 0.354);
+    height: 70px;
+    text-align: center;
+    color: antiquewhite;
+    margin: auto;
+    font-size: 25px;
+}
+
+#txtPosition {
+    color: aliceblue;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 25px;
+}

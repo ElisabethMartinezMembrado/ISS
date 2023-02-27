@@ -1,0 +1,12 @@
+<body>
+    <p>
+        <mat-toolbar id="navbar">
+            <span>International Space Station</span>
+        </mat-toolbar>
+    </p>
+    <p id="txtPosition">El ISS se encuentra en : {{issPosition}}</p>
+
+
+
+    <app-map [data]="issPosition" [localitation]="localitationUser"></app-map>
+</body>
