@@ -19,7 +19,7 @@ const vectorLayer = new VectorLayer({
 });
 const iconStyle = new Style({
   image: new Icon({
-    scale: 0.02,
+    scale: 0.03,
     opacity: 1,
     src: 'https://w7.pngwing.com/pngs/174/589/png-transparent-arrow-direction-point-pointer-arrows-icon.png'
   })
