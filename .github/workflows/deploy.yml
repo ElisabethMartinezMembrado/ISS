@@ -14,5 +14,6 @@ jobs:
       with:
         angular_dist_build_folder: dist/station-international
         github_access_token: ${{ secrets.ACCESS_TOKEN }} # see the Configuration section for how you can create secrets
+        base_href: https://elisabethmartinezmembrado.github.io/ISS/
 
         
