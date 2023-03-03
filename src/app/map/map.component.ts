@@ -31,7 +31,7 @@ const añadirMarcador = (lat: number, lon: number) => {
     geometry: new Point(transform([lon, lat], 'EPSG:4326',
       'EPSG:3857')),
   });
-  console.log(lon, lat);
+
 
   vectorSource.addFeature(marker);
 
@@ -66,7 +66,7 @@ const marcadorGeoloca = (latitude: number, longitude: number) => {
 })
 export class MapComponent {
   @Input() data: any[];
-  @Input() localitation: any[]
+
   map: Map;
 
   ngOnInit() {
