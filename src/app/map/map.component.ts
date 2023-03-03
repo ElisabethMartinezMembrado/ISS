@@ -70,7 +70,7 @@ export class MapComponent {
   map: Map;
 
   ngOnInit() {
-    this.getLocation()
+    this.getLocation();
     this.map = new Map({
       target: 'map',
       layers: [
