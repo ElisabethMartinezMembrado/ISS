@@ -25,13 +25,14 @@ export class VisualizadorComponent {
   ngOnInit() {
 
     interval$.pipe(
-      switchMap(() => this.http.get<any>('http://api.open-notify.org/iss-now.json')),
+      switchMap(() => this.http.get<any>('https://api.wheretheiss.at/v1/satellites/25544')),
       catchError(error => {
         // maneja el error
         return throwError(error);
       })
     ).subscribe(data => {
-      this.issPosition = [data.iss_position.latitude, data.iss_position.longitude];
+      this.issPosition = [data.latitude, data.longitude];
+      console.log(`Estoy extrayendo los datos nuevos:`, data.latitude, data.longitude)
     })
   }
 
