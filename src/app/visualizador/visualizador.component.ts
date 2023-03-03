@@ -25,7 +25,7 @@ export class VisualizadorComponent {
   ngOnInit() {
     this.getLocation()
     interval$.pipe(
-      switchMap(() => this.http.get<any>('https://api.open-notify.org/iss-now.json')),
+      switchMap(() => this.http.get<any>('http://api.open-notify.org/iss-now.json')),
       catchError(error => {
         // maneja el error
         return throwError(error);
