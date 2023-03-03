@@ -113,8 +113,6 @@ export class MapComponent {
     añadirMarcador(changes["data"].currentValue[0], changes["data"].currentValue[1]);
 
   }
-
-
 }
 
 
