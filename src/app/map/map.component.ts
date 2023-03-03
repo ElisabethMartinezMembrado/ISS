@@ -70,6 +70,7 @@ export class MapComponent {
   map: Map;
 
   ngOnInit() {
+    this.getLocation()
     this.map = new Map({
       target: 'map',
       layers: [
@@ -92,17 +93,25 @@ export class MapComponent {
       })
     });
 
-    this.map.on('singleclick', function (event) {
-      var lonLat = toLonLat(event.coordinate);
-      añadirMarcador(lonLat[0], lonLat[1]);
-      marcadorGeoloca(lonLat[0], lonLat[1]);//
 
-    });
+  }
+  getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(position => {
+        console.log('Latitud:', position.coords.latitude);
+        console.log('Longitud:', position.coords.longitude);
+        marcadorGeoloca(position.coords.latitude, position.coords.longitude);
+
+      });
+    } else {
+      console.error('Geolocalización no soportada');
+    }
   }
 
   ngOnChanges(changes: SimpleChanges) {
     console.log("Estoy recibiendo una nueva ubicacion", changes["data"].currentValue[1], changes["data"].currentValue[0])
-    añadirMarcador(changes["data"].currentValue[0], changes["data"].currentValue[1])
+    añadirMarcador(changes["data"].currentValue[0], changes["data"].currentValue[1]);
+
   }
 
 

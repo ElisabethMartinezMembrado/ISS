@@ -40,7 +40,7 @@ export class VisualizadorComponent {
         this.latitude = position.coords.latitude;
         this.longitude = position.coords.longitude;
         console.log('Estamos pidiendo ubicacion')
-        console.log(this.latitude)
+        console.log(position)
         console.log(this.longitude)
         this.localitationUser = [this.latitude, this.longitude]
 
